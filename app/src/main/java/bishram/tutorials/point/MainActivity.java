@@ -12,5 +12,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Just to check whether the firebase is working
+        // Get the reference of the Firebase database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        // Get the reference of the Firebase database
+        DatabaseReference mRef = database.getReference("message");
+        mRef.setValue("How are you doing?");
     }
 }
